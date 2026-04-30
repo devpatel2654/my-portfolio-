@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Patel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation (Sleek UI) -->
+        <nav class="sidebar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Dev Patel<span>.</span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" data-target="home" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#" data-target="experience"><i class="fas fa-briefcase"></i> <span>Experience</span></a>
+                </li>
+                <li><a href="#" data-target="education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a>
+                </li>
+                <li><a href="#" data-target="projects"><i class="fas fa-layer-group"></i> <span>Projects</span></a></li>
+                <li><a href="#" data-target="skills"><i class="fas fa-tools"></i> <span>Skills</span></a></li>
+                <li><a href="#" data-target="certifications"><i class="fas fa-certificate"></i>
+                        <span>Certificates</span></a></li>
+            </ul>
+
+            <div class="nav-footer">
+                <a href="#contact" class="btn-contact"><i class="fas fa-paper-plane"></i> <span>Hire Me</span></a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Header for Mobile / Top -->
+            <header class="mobile-header">
+                <div class="logo">Dev<span>.</span></div>
+                <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </header>
+
+            <div class="sections-container">
+                <!-- HOME SECTION -->
+                <section id="home" class="section active">
+                    <div class="hero">
+                        <div class="hero-content">
+                            <span class="greeting">Hello, I'm</span>
+                            <h1 id="user-name" class="glitch-effect">Dev Patel</h1>
+                            <p id="hero-tagline" class="tagline"></p>
+                            <p id="about-text" class="about-desc"></p>
+                            <div class="social-links" id="social-links"></div>
+                            <div class="hero-cta">
+                                <button class="btn primary-btn"
+                                    onclick="document.querySelector('[data-target=\'projects\']').click()">View
+                                    Work</button>
+                            </div>
+                        </div>
+                        <div class="hero-graphic">
+                            <div class="glow-orb"></div>
+                            <div class="glow-orb orb-2"></div>
+                            <!-- A decorative abstract element -->
+                            <div class="glass-card decorative-card">
+                                <i class="fas fa-terminal"></i>
+                                <span>Code is poetry</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EXPERIENCE SECTION -->
+                <section id="experience" class="section">
+                    <div class="section-header">
+                        <h2><span class="highlight">01.</span> Experience</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div id="experience-list" class="timeline"></div>
+                </section>
+
+                <!-- EDUCATION SECTION -->
+                <section id="education" class="section">
+                    <div class="section-header">
+                        <h2><span class="highlight">02.</span> Education</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div id="education-list" class="timeline"></div>
+                </section>
+
+                <!-- PROJECTS SECTION -->
+                <section id="projects" class="section">
+                    <div class="section-header">
+                        <h2><span class="highlight">03.</span> Featured Projects</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div id="project-grid" class="grid projects-grid"></div>
+                </section>
+
+                <!-- SKILLS SECTION -->
+                <section id="skills" class="section">
+                    <div class="section-header">
+                        <h2><span class="highlight">04.</span> Tech Stack</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div class="skills-wrapper">
+                        <div id="skills-list" class="skills-container"></div>
+                    </div>
+                </section>
+
+                <!-- CERTIFICATIONS SECTION -->
+                <section id="certifications" class="section">
+                    <div class="section-header">
+                        <h2><span class="highlight">05.</span> Certifications</h2>
+                        <div class="line"></div>
+                    </div>
+                    <div id="cert-grid" class="grid cert-grid"></div>
+                </section>
+            </div>
+
+            <footer id="contact" class="glass-footer">
+                <div class="footer-content">
+                    <h2>Let's build something amazing.</h2>
+                    <p style="margin-bottom: 3rem;">I'm always open to discussing product design work or partnership
+                        opportunities.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email</h3>
+                            <a id="footer-email" class="contact-link"></a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <h3>Phone</h3>
+                            <a id="footer-phone" class="contact-link"></a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Location</h3>
+                            <p id="footer-location" class="contact-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">&copy; <span id="year"></span> Dev Patel. Crafted with passion.</p>
+            </footer>
+        </main>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
